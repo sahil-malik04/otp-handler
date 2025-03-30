@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { OTP_DIGITS_COUNT } from "../utils/constants";
 
-const OTPInput = () => {
+const OtpInput = () => {
   const [inputArr, setInputArr] = useState(
     new Array(OTP_DIGITS_COUNT).fill("")
   );
@@ -28,12 +28,8 @@ const OTPInput = () => {
   };
 
   return (
-    <div
-      style={{
-        margin: "50px",
-      }}
-    >
-      {inputArr.map((item, index) => (
+    <div>
+      {inputArr?.map((item, index) => (
         <input
           key={index}
           type="text"
@@ -48,4 +44,4 @@ const OTPInput = () => {
   );
 };
 
-export default OTPInput;
+export default OtpInput;
